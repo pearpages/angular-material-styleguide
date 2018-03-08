@@ -7,7 +7,6 @@ import { Component } from '@angular/core';
       padding: 12px;
       color: white;
       font-size: 14px;
-      margin-top: 40px;
     }
     footer * {
       color: white;
