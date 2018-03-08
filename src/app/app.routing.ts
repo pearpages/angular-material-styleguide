@@ -12,7 +12,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [...appRoutedComponents]
+  declarations: [...appRoutedComponents],
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule, ...appRoutedComponents],
 })
