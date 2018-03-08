@@ -7,10 +7,15 @@ import { Component, Input } from '@angular/core';
       margin: 64px 0 0 0;
       padding: 28px;
     }
+    .sty-page__body {
+      padding: 20px;
+    }
   `],
   template: `
   <h2 class="primary">{{ title }}</h2>
-  <ng-content></ng-content>
+  <div class="sty-page__body">
+    <ng-content></ng-content>
+  </div>
   `
 })
 

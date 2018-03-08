@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { LandingComponent } from './landing.component';
 import { ResourcesComponent } from './resources.component';
-import { SharedModule } from './shared';
+import { SharedModule } from '../shared';
 
 export const appRoutedComponents = [ResourcesComponent, LandingComponent];
 
