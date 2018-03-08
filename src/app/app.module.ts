@@ -5,7 +5,7 @@ import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app.routing';
-import { SharedModule } from './shared.module';
+import { SharedModule } from './shared';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
