@@ -14,7 +14,7 @@ import { Component, OnInit } from '@angular/core';
       <li>Mini Fab</li>
     </ul>
 
-    <hr>
+    <mat-divider></mat-divider>
 
     <h3>Basic Buttons</h3>
     <div class="button-row">
