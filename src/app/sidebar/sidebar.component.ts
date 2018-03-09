@@ -23,7 +23,7 @@ import { Component, OnInit } from '@angular/core';
        </button>
     </mat-list-item>
     <mat-list-item>
-       <a matLine >Buttons & Indicators</a>
+       <a [routerLink]="['examples', 'buttons-and-indicators']" matLine >Buttons & Indicators</a>
        <button mat-icon-button>
           <mat-icon>add_box</mat-icon>
        </button>
