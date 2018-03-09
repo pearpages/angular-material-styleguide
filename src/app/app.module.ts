@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './main';
 import { SharedModule } from './shared';
+import { SidebarModule } from './sidebar';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { SharedModule } from './shared';
     BrowserModule,
     BrowserAnimationsModule,
     SharedModule,
+    SidebarModule,
     AppRoutingModule
   ],
   providers: [],

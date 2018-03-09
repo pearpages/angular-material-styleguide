@@ -1,7 +1,7 @@
 <mat-sidenav-container>
   <mat-sidenav #sidenav mode="side" [(opened)]="opened" (opened)="events.push('open!')"
                (closed)="events.push('close!')">
-    Sidenav content
+    <sty-sidebar></sty-sidebar>
   </mat-sidenav>
   <mat-sidenav-content>
     <sty-header (menuClicked)="sidenav.toggle()"></sty-header>
