@@ -10,10 +10,17 @@ import { Component, OnInit } from '@angular/core';
   template: `
   <sty-page title="Buttons and Indicators">
 
-    <h3>Button</h3>
-    <p>Angular Material buttons are native **button** or **a** elements enhanced with Material Design styling and ink ripples.</p>
+    <h2>Types</h2>
+
+    <ul>
+      <li>Button</li>
+      <li>Button Toggle</li>
+    </ul>
 
     <mat-divider></mat-divider>
+
+    <h3>Button</h3>
+    <p>Angular Material buttons are native **button** or **a** elements enhanced with Material Design styling and ink ripples.</p>
 
     <mat-tab-group>
       <mat-tab label="Basic">
@@ -82,6 +89,25 @@ import { Component, OnInit } from '@angular/core';
         </div>
       </mat-tab>
     </mat-tab-group>
+
+    <mat-divider></mat-divider>
+
+    <h3>Button Toggle</h3>
+
+    <mat-button-toggle-group #group="matButtonToggleGroup">
+      <mat-button-toggle value="left">
+        <mat-icon>format_align_left</mat-icon>
+      </mat-button-toggle>
+      <mat-button-toggle value="center">
+        <mat-icon>format_align_center</mat-icon>
+      </mat-button-toggle>
+      <mat-button-toggle value="right">
+        <mat-icon>format_align_right</mat-icon>
+      </mat-button-toggle>
+      <mat-button-toggle value="justify" disabled>
+        <mat-icon>format_align_justify</mat-icon>
+      </mat-button-toggle>
+    </mat-button-toggle-group>
 
   </sty-page>
   `
