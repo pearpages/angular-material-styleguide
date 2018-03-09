@@ -2,7 +2,55 @@
 
 ## Angular Material
 
+1. Install Angular Material and Angular CDK
 
+```bash
+npm install --save @angular/material @angular/cdk
+```
+
+2. Animations
+
+```bash
+npm install --save @angular/animations
+```
+
+```ts
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
+@NgModule({
+  ...
+  imports: [BrowserAnimationsModule],
+  ...
+})
+export class PizzaPartyAppModule { }
+```
+
+3. Import the component modules
+
+> Be sure to import the Angular Material modules after Angular's BrowserModule, as the import order matters for NgModules.
+
+```ts
+import {MatButtonModule, MatCheckboxModule} from '@angular/material';
+
+@NgModule({
+  ...
+  imports: [MatButtonModule, MatCheckboxModule],
+  ...
+})
+export class PizzaPartyAppModule { }
+```
+
+4. Include a theme
+
+```scss
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+```
+
+5. Material Icons
+
+```html
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+```
 
 ## Angular / CLI
 
