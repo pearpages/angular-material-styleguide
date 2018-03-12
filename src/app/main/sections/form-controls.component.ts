@@ -37,7 +37,22 @@ import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
       {{ this.datepicker.get('datepicker').value }}
       </code>
     </sty-expansion>
-    <sty-expansion title="Form field">
+    <sty-expansion title="Form field & Input">
+      <p>The following input types can be used with matInput:</p>
+      <ul>
+        <li>date</li>
+        <li>datetime-local</li>
+        <li>email</li>
+        <li>month</li>
+        <li>number</li>
+        <li>password</li>
+        <li>search</li>
+        <li>tel</li>
+        <li>text</li>
+        <li>time</li>
+        <li>url</li>
+        <li>week</li>
+      </ul>
       <form [formGroup]="texts">
         <mat-form-field>
           <input matInput placeholder="Input" formControlName="short">
@@ -49,9 +64,6 @@ import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
       <code>
         {{ this.texts.value | json }}
       </code>
-    </sty-expansion>
-    <sty-expansion title="Input">
-      not yet ready
     </sty-expansion>
     <sty-expansion title="Radio button">
       not yet ready
