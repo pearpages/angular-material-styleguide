@@ -1,14 +1,22 @@
 import { Component } from '@angular/core';
+import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'sty-forms-control',
   template: `
   <sty-page title="Forms Control">
     <sty-expansion title="AutoComplete">
-      not yet ready
+      <form [formGroup]="autoComplete">
+        <mat-form-field>
+          <input type="text" matInput formControlName="name">
+        </mat-form-field>
+      </form>
     </sty-expansion>
     <sty-expansion title="Checkbox">
-      not yet ready
+      <form [formGroup]="checkbox">
+        <mat-checkbox formControlName="alive">Check me!</mat-checkbox>
+      </form>
+      {{ this.checkbox.get('alive').value }}
     </sty-expansion>
     <sty-expansion title="Datepicker">
       not yet ready
@@ -36,4 +44,19 @@ import { Component } from '@angular/core';
 })
 
 export class FormsControlComponent {
+  autoComplete: FormGroup;
+  checkbox: FormGroup;
+
+  constructor(private fb: FormBuilder) {
+    this.createForms();
+  }
+
+  createForms() {
+    this.autoComplete = this.fb.group({
+      name: ['']
+    });
+    this.checkbox = this.fb.group({
+      alive: [true]
+    });
+  }
 }

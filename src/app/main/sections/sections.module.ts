@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { SharedModule } from './../../shared/shared.module';
 import { FormsControlComponent } from './form-controls.component';
@@ -13,7 +14,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [SharedModule, RouterModule.forRoot(routes)],
+  imports: [ReactiveFormsModule, SharedModule, RouterModule.forRoot(routes)],
   exports: [RouterModule, ...components],
   declarations: components,
 })
