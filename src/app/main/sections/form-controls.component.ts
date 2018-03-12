@@ -16,7 +16,9 @@ import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
       <form [formGroup]="checkbox">
         <mat-checkbox formControlName="alive">Check me!</mat-checkbox>
       </form>
-      {{ this.checkbox.get('alive').value }}
+      <code>
+        {{ this.checkbox.get('alive').value }}
+      </code>
     </sty-expansion>
     <sty-expansion title="Datepicker">
       not yet ready
