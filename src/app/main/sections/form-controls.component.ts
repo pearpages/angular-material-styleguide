@@ -21,7 +21,16 @@ import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
       </code>
     </sty-expansion>
     <sty-expansion title="Datepicker">
-      not yet ready
+      <form [formGroup]="datepicker">
+        <mat-form-field>
+          <input matInput formControlName="datepicker" [matDatepicker]="picker" placeholder="Choose a date">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </form>
+      <code>
+      {{ this.datepicker.get('datepicker').value }}
+      </code>
     </sty-expansion>
     <sty-expansion title="Form field">
       not yet ready
@@ -48,6 +57,7 @@ import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
 export class FormsControlComponent {
   autoComplete: FormGroup;
   checkbox: FormGroup;
+  datepicker: FormGroup;
 
   constructor(private fb: FormBuilder) {
     this.createForms();
@@ -60,5 +70,8 @@ export class FormsControlComponent {
     this.checkbox = this.fb.group({
       alive: [true]
     });
+    this.datepicker = this.fb.group({
+      datepicker: [(new Date()).toISOString()]
+    })
   }
 }
