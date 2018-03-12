@@ -5,8 +5,9 @@ import { MaterialModule } from './material.module';
 import { HeaderComponent } from './header.component';
 import { FooterComponent } from './footer.component';
 import { PageComponent } from './page.component';
+import { ExpansionComponent } from './expansion.component';
 
-const components = [HeaderComponent, FooterComponent, PageComponent];
+const components = [HeaderComponent, FooterComponent, PageComponent, ExpansionComponent];
 
 @NgModule({
   declarations: components,

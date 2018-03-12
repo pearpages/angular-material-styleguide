@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   template: `
   <mat-nav-list>
     <mat-list-item>
-       <a matLine >(Disabled) Form Controls</a>
+       <a [routerLink]="['examples', 'forms-control']" matLine >Form Controls</a>
        <button mat-icon-button>
           <mat-icon>create</mat-icon>
        </button>
