@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 import { MaterialModule } from './material.module';
@@ -11,7 +12,7 @@ const components = [HeaderComponent, FooterComponent, PageComponent, ExpansionCo
 
 @NgModule({
   declarations: components,
-  imports: [MaterialModule, RouterModule],
-  exports: [MaterialModule, RouterModule, ...components]
+  imports: [CommonModule, MaterialModule, RouterModule],
+  exports: [CommonModule, MaterialModule, RouterModule, ...components]
 })
 export class SharedModule { }

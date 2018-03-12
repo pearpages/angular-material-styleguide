@@ -3,6 +3,11 @@ import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'sty-forms-control',
+  styles: [`
+  mat-form-field {
+    width: 100%;
+  }
+  `],
   template: `
   <sty-page title="Forms Control">
     <sty-expansion title="AutoComplete">
@@ -33,7 +38,17 @@ import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
       </code>
     </sty-expansion>
     <sty-expansion title="Form field">
-      not yet ready
+      <form [formGroup]="texts">
+        <mat-form-field>
+          <input matInput placeholder="Input" formControlName="short">
+        </mat-form-field>
+        <mat-form-field>
+          <textarea matInput placeholder="Textarea" formControlName="long"></textarea>
+        </mat-form-field>
+      </form>
+      <code>
+        {{ this.texts.value | json }}
+      </code>
     </sty-expansion>
     <sty-expansion title="Input">
       not yet ready
@@ -58,6 +73,7 @@ export class FormsControlComponent {
   autoComplete: FormGroup;
   checkbox: FormGroup;
   datepicker: FormGroup;
+  texts: FormGroup;
 
   constructor(private fb: FormBuilder) {
     this.createForms();
@@ -72,6 +88,10 @@ export class FormsControlComponent {
     });
     this.datepicker = this.fb.group({
       datepicker: [(new Date()).toISOString()]
-    })
+    });
+    this.texts = this.fb.group({
+      short: ['Pere'],
+      long: ['Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec enim sollicitudin, auctor elit quis, pretium dui. Maecenas luctus, urna sed ullamcorper gravida, nunc massa cursus nunc, et auctor quam est id tortor. Pellentesque eu ante ac orci blandit iaculis. Curabitur interdum porttitor mollis. Donec faucibus felis vitae magna finibus, quis varius nulla lacinia. Donec fringilla, justo eu hendrerit lacinia, dolor mauris auctor nulla, gravida consectetur lacus sapien eget metus. In sem quam, interdum sed consectetur sed, vulputate ac augue. Nunc accumsan justo sed nunc auctor condimentum. Donec tristique varius libero nec placerat. Proin vel diam vitae nisi porttitor interdum. Cras bibendum porttitor diam, at aliquam augue dignissim at. Donec ut mollis nisi. Quisque ornare fermentum odio, non finibus est accumsan et. Cras non risus interdum, gravida ligula quis, maximus neque. Sed vitae erat diam. Suspendisse egestas ipsum tortor, ut bibendum massa imperdiet sit amet.']
+    });
   }
 }
