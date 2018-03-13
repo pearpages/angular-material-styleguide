@@ -93,7 +93,12 @@ import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
       </code>
     </sty-expansion>
     <sty-expansion title="Slider">
-      not yet ready
+      <form [formGroup]="slider">
+        <mat-slider formControlName="slider" min="1" max="5" step="0.5" ></mat-slider>
+      </form>
+      <code>
+        {{ this.slider.value | json }}
+      </code>
     </sty-expansion>
     <sty-expansion title="Slider toggle">
       not yet ready
@@ -110,6 +115,7 @@ export class FormsControlComponent {
   radios: FormGroup;
   select: FormGroup;
   foods = ['Soup', 'Burger', 'Lobster'];
+  slider: FormGroup;
 
   constructor(private fb: FormBuilder) {
     this.createForms();
@@ -134,6 +140,9 @@ export class FormsControlComponent {
     });
     this.select = this.fb.group({
       select: ['Lobster']
+    });
+    this.slider = this.fb.group({
+      slider: [2]
     });
   }
 }
