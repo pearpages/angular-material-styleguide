@@ -101,7 +101,12 @@ import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
       </code>
     </sty-expansion>
     <sty-expansion title="Slider toggle">
-      not yet ready
+      <form [formGroup]="sliderToggle">
+        <mat-slide-toggle formControlName="sliderToggle"></mat-slide-toggle>
+      </form>
+      <code>
+        {{ this.sliderToggle.value | json }}
+      </code>
     </sty-expansion>
   </sty-page>
   `
@@ -116,6 +121,7 @@ export class FormsControlComponent {
   select: FormGroup;
   foods = ['Soup', 'Burger', 'Lobster'];
   slider: FormGroup;
+  sliderToggle: FormGroup;
 
   constructor(private fb: FormBuilder) {
     this.createForms();
@@ -143,6 +149,9 @@ export class FormsControlComponent {
     });
     this.slider = this.fb.group({
       slider: [2]
+    });
+    this.sliderToggle = this.fb.group({
+      sliderToggle: false
     });
   }
 }
