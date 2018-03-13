@@ -66,7 +66,17 @@ import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
       </code>
     </sty-expansion>
     <sty-expansion title="Radio button">
-      not yet ready
+      <form [formGroup]="radios">
+        <mat-radio-group formControlName="radios">
+          <mat-radio-button value="1">Option 1</mat-radio-button>
+          <mat-radio-button value="2">Option 2</mat-radio-button>
+          <mat-radio-button value="3">Option 3</mat-radio-button>
+          <mat-radio-button value="4">Option 4</mat-radio-button>
+        </mat-radio-group>
+      </form>
+      <code>
+        {{ this.radios.value | json }}
+      </code>
     </sty-expansion>
     <sty-expansion title="Select">
       not yet ready
@@ -86,6 +96,7 @@ export class FormsControlComponent {
   checkbox: FormGroup;
   datepicker: FormGroup;
   texts: FormGroup;
+  radios: FormGroup;
 
   constructor(private fb: FormBuilder) {
     this.createForms();
@@ -104,6 +115,9 @@ export class FormsControlComponent {
     this.texts = this.fb.group({
       short: ['Pere'],
       long: ['Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec enim sollicitudin, auctor elit quis, pretium dui. Maecenas luctus, urna sed ullamcorper gravida, nunc massa cursus nunc, et auctor quam est id tortor. Pellentesque eu ante ac orci blandit iaculis. Curabitur interdum porttitor mollis. Donec faucibus felis vitae magna finibus, quis varius nulla lacinia. Donec fringilla, justo eu hendrerit lacinia, dolor mauris auctor nulla, gravida consectetur lacus sapien eget metus. In sem quam, interdum sed consectetur sed, vulputate ac augue. Nunc accumsan justo sed nunc auctor condimentum. Donec tristique varius libero nec placerat. Proin vel diam vitae nisi porttitor interdum. Cras bibendum porttitor diam, at aliquam augue dignissim at. Donec ut mollis nisi. Quisque ornare fermentum odio, non finibus est accumsan et. Cras non risus interdum, gravida ligula quis, maximus neque. Sed vitae erat diam. Suspendisse egestas ipsum tortor, ut bibendum massa imperdiet sit amet.']
+    });
+    this.radios = this.fb.group({
+      radios: ['3']
     });
   }
 }
