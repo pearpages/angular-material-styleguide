@@ -17,7 +17,7 @@ import { Component, OnInit } from '@angular/core';
        </button>
     </mat-list-item>
     <mat-list-item>
-       <a matLine >(Disabled) Layout</a>
+       <a matLine [routerLink]="['examples', 'layout']">Layout</a>
        <button mat-icon-button>
           <mat-icon>view_module</mat-icon>
        </button>
