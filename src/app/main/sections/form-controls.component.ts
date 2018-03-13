@@ -79,7 +79,18 @@ import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
       </code>
     </sty-expansion>
     <sty-expansion title="Select">
-      not yet ready
+      <form [formGroup]="select">
+        <mat-form-field>
+          <mat-select formControlName="select" placeholder="Favorite food">
+            <mat-option *ngFor="let food of foods" [value]="food">
+              {{ food }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </form>
+      <code>
+        {{ this.select.value | json }}
+      </code>
     </sty-expansion>
     <sty-expansion title="Slider">
       not yet ready
@@ -97,6 +108,8 @@ export class FormsControlComponent {
   datepicker: FormGroup;
   texts: FormGroup;
   radios: FormGroup;
+  select: FormGroup;
+  foods = ['Soup', 'Burger', 'Lobster'];
 
   constructor(private fb: FormBuilder) {
     this.createForms();
@@ -118,6 +131,9 @@ export class FormsControlComponent {
     });
     this.radios = this.fb.group({
       radios: ['3']
+    });
+    this.select = this.fb.group({
+      select: ['Lobster']
     });
   }
 }
