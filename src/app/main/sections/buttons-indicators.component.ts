@@ -118,6 +118,18 @@ import { Component, OnInit } from '@angular/core';
       </mat-button-toggle-group>
     </sty-expansion>
 
+    <sty-expansion [title]="'Chips'">
+    </sty-expansion>
+
+    <sty-expansion [title]="'Icon'">
+    </sty-expansion>
+
+    <sty-expansion [title]="'Progress spinner'">
+    </sty-expansion>
+
+    <sty-expansion [title]="'Progress bar'">
+    </sty-expansion>
+
   </sty-page>
   `
 })
