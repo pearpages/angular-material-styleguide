@@ -52,7 +52,12 @@ import { Component } from '@angular/core';
     </sty-expansion>
 
     <sty-expansion [title]="'Expansion Panel'">
-
+      <mat-card>
+        <mat-card-title>Examples</mat-card-title>
+        <mat-card-content>
+          <p>To see examples of the <strong>mat-expansion-panel</strong> look at the <strong>sty-expansion</strong> component and all over the styleguide app.</p>
+        </mat-card-content>
+      </mat-card>
     </sty-expansion>
 
     <sty-expansion [title]="'Grid list'">
