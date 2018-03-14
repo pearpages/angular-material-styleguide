@@ -133,6 +133,12 @@ import { Component, OnInit } from '@angular/core';
     </sty-expansion>
 
     <sty-expansion [title]="'Progress spinner'">
+      <ul>
+        <li>Determinate</li>
+        <li>Indeterminate</li>
+      </ul>
+      <h4>Indeterminate</h4>
+      <mat-progress-spinner mode="indeterminate"></mat-progress-spinner>
     </sty-expansion>
 
     <sty-expansion [title]="'Progress bar'">
