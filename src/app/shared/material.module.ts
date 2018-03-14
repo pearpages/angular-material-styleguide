@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 
 import { MaterialFormModule } from './material-form.module';
+import { MaterialNavigationModule } from './material-navigation.module';
 import { MaterialLayoutModule } from './material-layout.module';
-import { MatSidenavModule, MatIconModule, MatMenuModule, MatButtonModule, MatToolbarModule, MatTabsModule, MatButtonToggleModule } from '@angular/material';
+import { MatIconModule, MatButtonModule, MatTabsModule, MatButtonToggleModule } from '@angular/material';
 
-const modules = [MaterialFormModule, MaterialLayoutModule, MatSidenavModule, MatIconModule, MatMenuModule, MatButtonModule, MatToolbarModule, MatTabsModule, MatButtonToggleModule];
+const modules = [MaterialFormModule, MaterialLayoutModule, MaterialNavigationModule, MatIconModule, MatButtonModule, MatTabsModule, MatButtonToggleModule];
 @NgModule({
   imports: modules,
   exports: modules
