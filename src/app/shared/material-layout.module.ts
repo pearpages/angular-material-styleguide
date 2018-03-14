@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 
-import { MatCardModule } from '@angular/material';
+import { MatCardModule, MatDividerModule } from '@angular/material';
 
-const modules = [MatCardModule];
+const modules = [MatCardModule, MatDividerModule];
 
 @NgModule({
   imports: modules,

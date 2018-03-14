@@ -10,30 +10,35 @@ import { Component, OnInit } from '@angular/core';
           <mat-icon>create</mat-icon>
        </button>
     </mat-list-item>
+    <mat-divider></mat-divider>
     <mat-list-item>
        <a matLine >(Disabled) Navigation</a>
        <button mat-icon-button>
           <mat-icon>apps</mat-icon>
        </button>
     </mat-list-item>
+    <mat-divider></mat-divider>
     <mat-list-item>
        <a matLine [routerLink]="['examples', 'layout']">Layout</a>
        <button mat-icon-button>
           <mat-icon>view_module</mat-icon>
        </button>
     </mat-list-item>
+    <mat-divider></mat-divider>
     <mat-list-item>
        <a [routerLink]="['examples', 'buttons-and-indicators']" matLine >Buttons & Indicators</a>
        <button mat-icon-button>
           <mat-icon>add_box</mat-icon>
        </button>
     </mat-list-item>
+    <mat-divider></mat-divider>
     <mat-list-item>
        <a matLine >(Disabled) Popup & Modals</a>
        <button mat-icon-button>
           <mat-icon>present_to_all</mat-icon>
        </button>
     </mat-list-item>
+    <mat-divider></mat-divider>
     <mat-list-item>
        <a matLine >(Disabled) Data table</a>
        <button mat-icon-button>
