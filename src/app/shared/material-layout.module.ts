@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 
-import { MatCardModule, MatDividerModule, MatExpansionModule, MatGridListModule } from '@angular/material';
+import { MatCardModule, MatDividerModule, MatListModule, MatExpansionModule, MatGridListModule } from '@angular/material';
 
-const modules = [MatCardModule, MatDividerModule, MatExpansionModule, MatGridListModule];
+const modules = [MatCardModule, MatListModule, MatDividerModule, MatExpansionModule, MatGridListModule];
 
 @NgModule({
   imports: modules,

@@ -73,7 +73,15 @@ import { Component } from '@angular/core';
     </sty-expansion>
 
     <sty-expansion [title]="'List'">
+      <mat-selection-list #shoes>
+        <mat-list-option *ngFor="let shoe of typesOfShoes">
+          {{shoe}}
+        </mat-list-option>
+      </mat-selection-list>
 
+      <p>
+        Options selected: {{shoes.selectedOptions.selected.length}}
+      </p>
     </sty-expansion>
 
     <sty-expansion [title]="'Stepper'">
@@ -95,4 +103,5 @@ export class LayoutComponent {
     {text: 'Three', cols: 1, rows: 1, color: 'lightpink'},
     {text: 'Four', cols: 2, rows: 1, color: '#DDBDF1'},
   ];
+  typesOfShoes = ['Boots', 'Clogs', 'Loafers', 'Moccasins', 'Sneakers'];
 }
