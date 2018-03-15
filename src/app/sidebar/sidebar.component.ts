@@ -18,7 +18,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   <div class="sty-sidebar__close">
     <mat-icon class="sty-sidebar__close-icon" (click)="close.emit(true)">clear</mat-icon>
   </div>
-  <mat-nav-list>
+  <mat-nav-list (click)="close.emit(true)">
     <mat-list-item>
        <a [routerLink]="['examples', 'forms-control']" matLine >Form Controls</a>
        <button mat-icon-button>
