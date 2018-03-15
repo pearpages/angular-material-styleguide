@@ -19,7 +19,7 @@ import { MatDialog, MatSnackBar, MatDialogRef, MAT_DIALOG_DATA } from '@angular/
     </sty-expansion>
 
     <sty-expansion [title]="'Tooltip'">
-
+      <span matTooltip="Tooltip!">I have a tooltip</span>
     </sty-expansion>
 
   </sty-page>
