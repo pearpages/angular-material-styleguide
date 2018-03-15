@@ -40,7 +40,7 @@ import { Component, OnInit } from '@angular/core';
     </mat-list-item>
     <mat-divider></mat-divider>
     <mat-list-item>
-       <a matLine >(Disabled) Data table</a>
+       <a matLine [routerLink]="['examples', 'data-table']">Data table</a>
        <button mat-icon-button>
           <mat-icon>border_left</mat-icon>
        </button>

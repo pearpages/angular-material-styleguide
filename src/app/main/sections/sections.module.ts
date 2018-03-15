@@ -8,15 +8,17 @@ import { SharedModule } from './../../shared/shared.module';
 import { FormsControlComponent } from './form-controls.component';
 import { LayoutComponent } from './layout.component';
 import { PopupsModalsComponent, DialogOverviewExampleDialog, PizzaPartyComponent } from './popus-modals.component';
+import { DataTableComponent } from './data-table.component';
 import { ButtonsIndicatorsComponent } from './buttons-indicators.component';
 
-const components = [ButtonsIndicatorsComponent, FormsControlComponent, LayoutComponent, PopupsModalsComponent, DialogOverviewExampleDialog, PizzaPartyComponent];
+const components = [ButtonsIndicatorsComponent, FormsControlComponent, LayoutComponent, PopupsModalsComponent, DialogOverviewExampleDialog, PizzaPartyComponent, DataTableComponent];
 
 const routes: Routes = [
   { path: 'examples/buttons-and-indicators', component: ButtonsIndicatorsComponent },
   { path: 'examples/forms-control', component: FormsControlComponent },
   { path: 'examples/layout', component: LayoutComponent },
   { path: 'examples/popups-modals', component: PopupsModalsComponent },
+  { path: 'examples/data-table', component: DataTableComponent },
 ];
 // TODO: create dialog example own module and move the entryComponents
 // TODO: the same for the snackBar
