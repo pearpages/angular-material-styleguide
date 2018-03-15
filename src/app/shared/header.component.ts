@@ -11,7 +11,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   template: `
     <mat-toolbar class="sty-header" color="primary">
       <a mat-button (click)="menuClicked.emit(true)"><mat-icon>menu</mat-icon></a>
-      <span>CMS</span>
+      <span [routerLink]="['']">CMS</span>
     </mat-toolbar>
     `
 })
