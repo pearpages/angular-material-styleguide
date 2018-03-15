@@ -33,7 +33,7 @@ import { Component, OnInit } from '@angular/core';
     </mat-list-item>
     <mat-divider></mat-divider>
     <mat-list-item>
-       <a matLine >(Disabled) Popup & Modals</a>
+       <a [routerLink]="['examples', 'popups-modals']" matLine >Popup & Modals</a>
        <button mat-icon-button>
           <mat-icon>present_to_all</mat-icon>
        </button>
