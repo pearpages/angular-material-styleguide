@@ -674,7 +674,7 @@ var HeaderComponent = /** @class */ (function () {
     HeaderComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'sty-header',
-            styles: ["\n    .sty-header {\n      position: fixed;\n      box-shadow: 0px 1px 10px 0px #222;\n    }\n  "],
+            styles: ["\n    .sty-header {\n      position: fixed;\n      z-index: 1;\n      box-shadow: 0px 1px 10px 0px #222;\n    }\n  "],
             template: "\n    <mat-toolbar class=\"sty-header\" color=\"primary\">\n      <a mat-button (click)=\"menuClicked.emit(true)\"><mat-icon>menu</mat-icon></a>\n      <span [routerLink]=\"['']\">CMS</span>\n    </mat-toolbar>\n    "
         })
     ], HeaderComponent);
@@ -922,7 +922,7 @@ var PageComponent = /** @class */ (function () {
     PageComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'sty-page',
-            styles: ["\n    h2 {\n      margin: 64px 0 0 0;\n      padding: 28px;\n    }\n    .sty-page__body {\n      padding: 20px;\n    }\n  "],
+            styles: ["\n    h2 {\n      margin: 64px 0 0 0;\n      padding: 28px;\n    }\n    .sty-page__body {\n      padding: 20px;\n    }\n    @media (max-width: 599px) {\n      h2 {\n        margin: 56px 0 0 0;\n        padding: 14px 20px;\n      }\n    }\n  "],
             template: "\n  <h2 class=\"primary\">{{ title }}</h2>\n  <div class=\"sty-page__body\">\n    <ng-content></ng-content>\n  </div>\n  "
         })
     ], PageComponent);

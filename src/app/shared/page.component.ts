@@ -10,6 +10,12 @@ import { Component, Input } from '@angular/core';
     .sty-page__body {
       padding: 20px;
     }
+    @media (max-width: 599px) {
+      h2 {
+        margin: 56px 0 0 0;
+        padding: 14px 20px;
+      }
+    }
   `],
   template: `
   <h2 class="primary">{{ title }}</h2>

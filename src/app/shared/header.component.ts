@@ -5,6 +5,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   styles: [`
     .sty-header {
       position: fixed;
+      z-index: 1;
       box-shadow: 0px 1px 10px 0px #222;
     }
   `],
