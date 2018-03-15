@@ -2,14 +2,15 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 import { SharedModule } from './../../shared/shared.module';
 import { FormsControlComponent } from './form-controls.component';
 import { LayoutComponent } from './layout.component';
-import { PopupsModalsComponent } from './popus-modals.component';
+import { PopupsModalsComponent, DialogOverviewExampleDialog } from './popus-modals.component';
 import { ButtonsIndicatorsComponent } from './buttons-indicators.component';
 
-const components = [ButtonsIndicatorsComponent, FormsControlComponent, LayoutComponent, PopupsModalsComponent];
+const components = [ButtonsIndicatorsComponent, FormsControlComponent, LayoutComponent, PopupsModalsComponent, DialogOverviewExampleDialog];
 
 const routes: Routes = [
   { path: 'examples/buttons-and-indicators', component: ButtonsIndicatorsComponent },
@@ -17,9 +18,10 @@ const routes: Routes = [
   { path: 'examples/layout', component: LayoutComponent },
   { path: 'examples/popups-modals', component: PopupsModalsComponent },
 ];
-
+// TODO: create dialog example own module and move the entryComponents
 @NgModule({
-  imports: [ReactiveFormsModule, CommonModule, SharedModule, RouterModule.forRoot(routes)],
+  entryComponents: [DialogOverviewExampleDialog],
+  imports: [ReactiveFormsModule, FormsModule, CommonModule, SharedModule, RouterModule.forRoot(routes)],
   exports: [RouterModule, ...components],
   declarations: components,
 })
