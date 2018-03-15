@@ -1,8 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'sty-sidebar',
+  styles: [`
+    .sty-sidebar__close {
+      text-align: right;
+    }
+    .sty-sidebar__close-icon {
+      cursor: pointer;
+      padding: 10px;
+    }
+    .sty-sidebar__close-icon:hover {
+      color: #ccc;
+    }
+  `],
   template: `
+  <div class="sty-sidebar__close">
+    <mat-icon class="sty-sidebar__close-icon" (click)="close.emit(true)">clear</mat-icon>
+  </div>
   <mat-nav-list>
     <mat-list-item>
        <a [routerLink]="['examples', 'forms-control']" matLine >Form Controls</a>
@@ -45,11 +60,13 @@ import { Component, OnInit } from '@angular/core';
           <mat-icon>border_left</mat-icon>
        </button>
     </mat-list-item>
-</mat-nav-list>
+  </mat-nav-list>
   `
 })
 
-export class SidebarComponent implements OnInit {
+export class SidebarComponent implements OnInit, Output {
+  @Output() close = new EventEmitter<boolean>();
+
   constructor() { }
 
   ngOnInit() { }
