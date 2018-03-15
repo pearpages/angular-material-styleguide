@@ -7,10 +7,10 @@ import { FormsModule } from '@angular/forms';
 import { SharedModule } from './../../shared/shared.module';
 import { FormsControlComponent } from './form-controls.component';
 import { LayoutComponent } from './layout.component';
-import { PopupsModalsComponent, DialogOverviewExampleDialog } from './popus-modals.component';
+import { PopupsModalsComponent, DialogOverviewExampleDialog, PizzaPartyComponent } from './popus-modals.component';
 import { ButtonsIndicatorsComponent } from './buttons-indicators.component';
 
-const components = [ButtonsIndicatorsComponent, FormsControlComponent, LayoutComponent, PopupsModalsComponent, DialogOverviewExampleDialog];
+const components = [ButtonsIndicatorsComponent, FormsControlComponent, LayoutComponent, PopupsModalsComponent, DialogOverviewExampleDialog, PizzaPartyComponent];
 
 const routes: Routes = [
   { path: 'examples/buttons-and-indicators', component: ButtonsIndicatorsComponent },
@@ -19,8 +19,9 @@ const routes: Routes = [
   { path: 'examples/popups-modals', component: PopupsModalsComponent },
 ];
 // TODO: create dialog example own module and move the entryComponents
+// TODO: the same for the snackBar
 @NgModule({
-  entryComponents: [DialogOverviewExampleDialog],
+  entryComponents: [DialogOverviewExampleDialog, PizzaPartyComponent],
   imports: [ReactiveFormsModule, FormsModule, CommonModule, SharedModule, RouterModule.forRoot(routes)],
   exports: [RouterModule, ...components],
   declarations: components,

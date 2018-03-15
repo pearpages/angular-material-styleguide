@@ -1,5 +1,5 @@
 import { Component, Inject } from '@angular/core';
-import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
+import { MatDialog, MatSnackBar, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 
 @Component({
   selector: 'sty-popups-modals',
@@ -13,7 +13,9 @@ import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
     </sty-expansion>
 
     <sty-expansion [title]="'Snackbar'">
-
+      <button mat-button (click)="openSnackBar()" aria-label="Show an example snack-bar">
+        Pizza party
+      </button>
     </sty-expansion>
 
     <sty-expansion [title]="'Tooltip'">
@@ -26,7 +28,9 @@ import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 
 export class PopupsModalsComponent {
 
-  constructor(public dialog: MatDialog) {}
+  constructor(
+    public dialog: MatDialog,
+    public snackBar: MatSnackBar) {}
 
   openDialog(): void {
     let dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
@@ -36,6 +40,12 @@ export class PopupsModalsComponent {
 
     dialogRef.afterClosed().subscribe(result => {
       alert('The dialog was closed');
+    });
+  }
+
+  openSnackBar() {
+    this.snackBar.openFromComponent(PizzaPartyComponent, {
+      duration: 500,
     });
   }
 
@@ -68,3 +78,13 @@ export class DialogOverviewExampleDialog {
   }
 
 }
+
+@Component({
+  selector: 'snack-bar-component-example-snack',
+  template: `<span class="example-pizza-party">
+    Pizza party!!! 🍕
+  </span>
+  `,
+  styles: [`.example-pizza-party { color: hotpink; }`],
+})
+export class PizzaPartyComponent {}
