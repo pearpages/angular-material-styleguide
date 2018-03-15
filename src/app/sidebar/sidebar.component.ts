@@ -64,7 +64,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   `
 })
 
-export class SidebarComponent implements OnInit, Output {
+export class SidebarComponent implements OnInit {
   @Output() close = new EventEmitter<boolean>();
 
   constructor() { }
