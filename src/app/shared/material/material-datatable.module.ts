@@ -8,4 +8,4 @@ const modules = [MatPaginatorModule, MatSortModule, MatTableModule];
   imports: modules,
   exports: modules
 })
-export class DataTableModule { }
+export class MaterialDataTableModule { }

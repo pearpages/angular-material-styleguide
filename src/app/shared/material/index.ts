@@ -4,3 +4,4 @@ export * from './material-form.module';
 export * from './material-layout.module';
 export * from './material-navigation.module';
 export * from './material-popups-modals.module';
+export * from './material-datatable.module';
