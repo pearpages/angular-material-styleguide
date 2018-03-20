@@ -9,7 +9,7 @@ import { FormsControlComponent } from './form-controls.component';
 import { LayoutComponent } from './layout.component';
 import { PopupsModalsComponent, DialogOverviewExampleDialog, PizzaPartyComponent } from './popus-modals.component';
 import { DataTableComponent } from './data-table.component';
-import { ButtonsIndicatorsComponent } from './buttons-indicators.component';
+import { ButtonsIndicatorsComponent } from './buttons';
 
 const components = [ButtonsIndicatorsComponent, FormsControlComponent, LayoutComponent, PopupsModalsComponent, DialogOverviewExampleDialog, PizzaPartyComponent, DataTableComponent];
 
