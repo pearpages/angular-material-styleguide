@@ -6,12 +6,13 @@ import { FormsModule } from '@angular/forms';
 
 import { SharedModule } from './../../shared/shared.module';
 import { FormsControlComponent } from './form-controls.component';
+import { ButtonsModule } from './buttons';
 import { LayoutComponent } from './layout.component';
 import { PopupsModalsComponent, DialogOverviewExampleDialog, PizzaPartyComponent } from './popus-modals.component';
 import { DataTableComponent } from './data-table.component';
 import { ButtonsIndicatorsComponent } from './buttons';
 
-const components = [ButtonsIndicatorsComponent, FormsControlComponent, LayoutComponent, PopupsModalsComponent, DialogOverviewExampleDialog, PizzaPartyComponent, DataTableComponent];
+const components = [FormsControlComponent, LayoutComponent, PopupsModalsComponent, DialogOverviewExampleDialog, PizzaPartyComponent, DataTableComponent];
 
 const routes: Routes = [
   { path: 'examples/buttons-and-indicators', component: ButtonsIndicatorsComponent },
@@ -24,7 +25,7 @@ const routes: Routes = [
 // TODO: the same for the snackBar
 @NgModule({
   entryComponents: [DialogOverviewExampleDialog, PizzaPartyComponent],
-  imports: [ReactiveFormsModule, FormsModule, CommonModule, SharedModule, RouterModule.forRoot(routes)],
+  imports: [ButtonsModule,ReactiveFormsModule, FormsModule, CommonModule, SharedModule, RouterModule.forRoot(routes)],
   exports: [RouterModule, ...components],
   declarations: components,
 })
