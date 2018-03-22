@@ -2,7 +2,7 @@
 
 ## Build Process
 
-```ng build`` creates the ```docs``` folder that is used for Github to publish the app.
+```ng build``` creates the ```docs``` folder that is used for Github to publish the app.
 
 ## Angular Material
 
