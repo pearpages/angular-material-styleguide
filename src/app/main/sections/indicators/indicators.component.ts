@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'sty-buttons-indicators',
+  selector: 'sty-indicators',
   styles: [`
     .button-row {
       padding: 40px;
@@ -9,14 +9,6 @@ import { Component, OnInit } from '@angular/core';
   `],
   template: `
   <sty-page title="Buttons and Indicators">
-
-    <sty-expansion [title]="'Button'">
-      <sty-basic-buttons></sty-basic-buttons>
-    </sty-expansion>
-
-    <sty-expansion [title]="'Button Toggle'">
-      <sty-toggle-buttons></sty-toggle-buttons>
-    </sty-expansion>
 
     <sty-expansion [title]="'Chips'">
       <sty-chip-buttons></sty-chip-buttons>
@@ -70,7 +62,7 @@ import { Component, OnInit } from '@angular/core';
   `
 })
 
-export class ButtonsIndicatorsComponent {
+export class IndicatorsComponent {
   handleClick() {
     alert('Yes, you clicked!');
   }

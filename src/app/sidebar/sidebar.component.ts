@@ -41,12 +41,19 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
     </mat-list-item>
     <mat-divider></mat-divider>
     <mat-list-item>
-       <a [routerLink]="['examples', 'buttons-and-indicators']" matLine >Buttons & Indicators</a>
+       <a [routerLink]="['examples', 'buttons']" matLine >Buttons</a>
        <button mat-icon-button>
           <mat-icon>add_box</mat-icon>
        </button>
     </mat-list-item>
     <mat-divider></mat-divider>
+    <mat-list-item>
+    <a [routerLink]="['examples', 'indicators']" matLine >Indicators</a>
+    <button mat-icon-button>
+       <mat-icon>add_box</mat-icon>
+    </button>
+ </mat-list-item>
+ <mat-divider></mat-divider>
     <mat-list-item>
        <a [routerLink]="['examples', 'popups-modals']" matLine >Popup & Modals</a>
        <button mat-icon-button>
