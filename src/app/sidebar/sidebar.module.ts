@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 
-import { SharedModule } from './../shared/shared.module';
+import { SharedModule } from 'app/shared';
 import { SidebarComponent } from './sidebar.component';
 
 const components = [SidebarComponent];

@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 
-import { SharedModule } from './../../shared/shared.module';
+import { SharedModule } from 'app/shared';
 import { FormsControlComponent } from './form-controls.component';
 import { PopupsModalsComponent, DialogOverviewExampleDialog, PizzaPartyComponent } from './popus-modals.component';
 import { DataTableComponent } from './data-table.component';

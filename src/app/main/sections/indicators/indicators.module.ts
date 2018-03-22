@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 
-import { SharedModule } from '../../../shared';
+import { SharedModule } from 'app/shared';
 import { ChipButtonsComponent } from './chips.component';
 import { IndicatorsComponent } from './indicators.component';
 import { IndicatorSpinnerComponent } from './spinner.component';

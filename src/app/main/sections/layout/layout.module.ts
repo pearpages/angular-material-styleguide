@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 
-import { SharedModule } from '../../../shared';
+import { SharedModule } from 'app/shared';
 import { LayoutGridComponent } from './grid.component';
 import { LayoutListComponent } from './list.component';
 import { LayoutDividerComponent } from './divider.component';
