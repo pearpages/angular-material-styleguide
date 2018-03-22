@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'sty-layout-divider',
+  selector: 'sty-layout-expansion',
   template: `
   <mat-card>
     <mat-card-title>Examples</mat-card-title>
