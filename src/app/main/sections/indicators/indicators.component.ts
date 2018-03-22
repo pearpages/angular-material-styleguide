@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
     }
   `],
   template: `
-  <sty-page title="Buttons and Indicators">
+  <sty-page title="Indicators">
 
     <sty-expansion [title]="'Chips'">
       <sty-chip-buttons></sty-chip-buttons>
