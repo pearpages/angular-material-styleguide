@@ -10,10 +10,8 @@ import { LayoutComponent } from './layout.component';
 import { PopupsModalsComponent, DialogOverviewExampleDialog, PizzaPartyComponent } from './popus-modals.component';
 import { DataTableComponent } from './data-table.component';
 
-import { ButtonsModule } from './buttons';
-import { ButtonsComponent } from './buttons';
-import { IndicatorsModule } from './indicators/indicators.module';
-import { IndicatorsComponent } from './indicators/indicators.component';
+import { ButtonsModule, ButtonsComponent } from './buttons';
+import { IndicatorsModule, IndicatorsComponent } from './indicators';
 
 const components = [FormsControlComponent, LayoutComponent, PopupsModalsComponent, DialogOverviewExampleDialog, PizzaPartyComponent, DataTableComponent];
 
