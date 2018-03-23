@@ -6,7 +6,6 @@ import { PagesRoutingModule, appRoutedComponents } from './pages.routing';
 
 @NgModule({
   declarations: [...appRoutedComponents],
-  imports: [PagesRoutingModule, SharedModule],
-  exports: [RouterModule, ...appRoutedComponents],
+  imports: [PagesRoutingModule, SharedModule]
 })
 export class PagesModule { }

@@ -17,7 +17,8 @@ import { SidebarModule } from './sidebar';
     BrowserAnimationsModule,
     SharedModule,
     SidebarModule,
-    MainModule
+    MainModule,
+    RouterModule.forRoot([])
   ],
   providers: [],
   bootstrap: [AppComponent]
