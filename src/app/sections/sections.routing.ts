@@ -9,12 +9,12 @@ import { ButtonsComponent } from './buttons';
 import { IndicatorsComponent } from './indicators';
 
 const routes: Routes = [
-  { path: 'examples/buttons', component: ButtonsComponent },
-  { path: 'examples/indicators', component: IndicatorsComponent },
-  { path: 'examples/forms-control', component: FormsControlComponent },
-  { path: 'examples/layout', component: LayoutComponent },
-  { path: 'examples/popups-modals', component: PopupsModalsComponent },
-  { path: 'examples/data-table', component: DataTableComponent },
+  { path: 'buttons', component: ButtonsComponent },
+  { path: 'indicators', component: IndicatorsComponent },
+  { path: 'forms-control', component: FormsControlComponent },
+  { path: 'layout', component: LayoutComponent },
+  { path: 'popups-modals', component: PopupsModalsComponent },
+  { path: 'data-table', component: DataTableComponent },
 ];
 
 @NgModule({
