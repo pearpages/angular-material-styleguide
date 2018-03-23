@@ -11,7 +11,7 @@ import { SharedModule } from './shared';
 const routes: Routes = [
   {
     path: 'examples',
-    loadChildren: './sections/sections.module#SectionsModule'
+    loadChildren: 'app/sections/sections.module#SectionsModule'
   }
 ];
 
