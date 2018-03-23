@@ -449,6 +449,126 @@ var ToggleButtonsComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/main/sections/forms/auto-complete.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SectionActoCompleteComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var SectionActoCompleteComponent = /** @class */ (function () {
+    function SectionActoCompleteComponent(fb) {
+        this.fb = fb;
+        this.autoComplete = this.fb.group({
+            name: ['']
+        });
+    }
+    SectionActoCompleteComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'section-auto-complete',
+            template: "\n  <form [formGroup]=\"autoComplete\">\n    <mat-form-field>\n      <input type=\"text\" matInput formControlName=\"name\">\n    </mat-form-field>\n  </form>\n  "
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormBuilder */]])
+    ], SectionActoCompleteComponent);
+    return SectionActoCompleteComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/main/sections/forms/checkbox.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SectionCheckboxComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var SectionCheckboxComponent = /** @class */ (function () {
+    function SectionCheckboxComponent(fb) {
+        this.fb = fb;
+        this.createForms();
+    }
+    SectionCheckboxComponent.prototype.createForms = function () {
+        this.checkbox = this.fb.group({
+            alive: [true]
+        });
+    };
+    SectionCheckboxComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'section-checkbox',
+            template: "\n  <form [formGroup]=\"checkbox\">\n    <mat-checkbox formControlName=\"alive\">Check me!</mat-checkbox>\n  </form>\n  <code>\n    {{ this.checkbox.get('alive').value }}\n  </code>\n  "
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormBuilder */]])
+    ], SectionCheckboxComponent);
+    return SectionCheckboxComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/main/sections/forms/date-picker.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SectionDatepickerComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var SectionDatepickerComponent = /** @class */ (function () {
+    function SectionDatepickerComponent(fb) {
+        this.fb = fb;
+        this.datepicker = this.fb.group({
+            datepicker: [(new Date()).toISOString()]
+        });
+    }
+    SectionDatepickerComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'section-datepicker',
+            template: "\n  <form [formGroup]=\"datepicker\">\n    <mat-form-field>\n      <input matInput formControlName=\"datepicker\" [matDatepicker]=\"picker\" placeholder=\"Choose a date\">\n      <mat-datepicker-toggle matSuffix [for]=\"picker\"></mat-datepicker-toggle>\n      <mat-datepicker #picker></mat-datepicker>\n    </mat-form-field>\n    </form>\n    <code>\n    {{ this.datepicker.get('datepicker').value }}\n    </code>\n  "
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormBuilder */]])
+    ], SectionDatepickerComponent);
+    return SectionDatepickerComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/main/sections/forms/form-controls.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -474,15 +594,6 @@ var FormsControlComponent = /** @class */ (function () {
         this.createForms();
     }
     FormsControlComponent.prototype.createForms = function () {
-        this.autoComplete = this.fb.group({
-            name: ['']
-        });
-        this.checkbox = this.fb.group({
-            alive: [true]
-        });
-        this.datepicker = this.fb.group({
-            datepicker: [(new Date()).toISOString()]
-        });
         this.texts = this.fb.group({
             short: ['Pere'],
             long: ['Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec enim sollicitudin, auctor elit quis, pretium dui. Maecenas luctus, urna sed ullamcorper gravida, nunc massa cursus nunc, et auctor quam est id tortor. Pellentesque eu ante ac orci blandit iaculis. Curabitur interdum porttitor mollis. Donec faucibus felis vitae magna finibus, quis varius nulla lacinia. Donec fringilla, justo eu hendrerit lacinia, dolor mauris auctor nulla, gravida consectetur lacus sapien eget metus. In sem quam, interdum sed consectetur sed, vulputate ac augue. Nunc accumsan justo sed nunc auctor condimentum. Donec tristique varius libero nec placerat. Proin vel diam vitae nisi porttitor interdum. Cras bibendum porttitor diam, at aliquam augue dignissim at. Donec ut mollis nisi. Quisque ornare fermentum odio, non finibus est accumsan et. Cras non risus interdum, gravida ligula quis, maximus neque. Sed vitae erat diam. Suspendisse egestas ipsum tortor, ut bibendum massa imperdiet sit amet.']
@@ -503,8 +614,7 @@ var FormsControlComponent = /** @class */ (function () {
     FormsControlComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'sty-forms-control',
-            styles: ["\n  mat-form-field {\n    width: 100%;\n  }\n  "],
-            template: "\n  <sty-page title=\"Forms Control\">\n    <sty-expansion title=\"AutoComplete\">\n      <form [formGroup]=\"autoComplete\">\n        <mat-form-field>\n          <input type=\"text\" matInput formControlName=\"name\">\n        </mat-form-field>\n      </form>\n    </sty-expansion>\n    <sty-expansion title=\"Checkbox\">\n      <form [formGroup]=\"checkbox\">\n        <mat-checkbox formControlName=\"alive\">Check me!</mat-checkbox>\n      </form>\n      <code>\n        {{ this.checkbox.get('alive').value }}\n      </code>\n    </sty-expansion>\n    <sty-expansion title=\"Datepicker\">\n      <form [formGroup]=\"datepicker\">\n        <mat-form-field>\n          <input matInput formControlName=\"datepicker\" [matDatepicker]=\"picker\" placeholder=\"Choose a date\">\n          <mat-datepicker-toggle matSuffix [for]=\"picker\"></mat-datepicker-toggle>\n          <mat-datepicker #picker></mat-datepicker>\n        </mat-form-field>\n      </form>\n      <code>\n      {{ this.datepicker.get('datepicker').value }}\n      </code>\n    </sty-expansion>\n    <sty-expansion title=\"Form field & Input\">\n      <p>The following input types can be used with matInput:</p>\n      <ul>\n        <li>date</li>\n        <li>datetime-local</li>\n        <li>email</li>\n        <li>month</li>\n        <li>number</li>\n        <li>password</li>\n        <li>search</li>\n        <li>tel</li>\n        <li>text</li>\n        <li>time</li>\n        <li>url</li>\n        <li>week</li>\n      </ul>\n      <form [formGroup]=\"texts\">\n        <mat-form-field>\n          <input matInput placeholder=\"Input\" formControlName=\"short\">\n        </mat-form-field>\n        <mat-form-field>\n          <textarea matInput placeholder=\"Textarea\" formControlName=\"long\"></textarea>\n        </mat-form-field>\n      </form>\n      <code>\n        {{ this.texts.value | json }}\n      </code>\n    </sty-expansion>\n    <sty-expansion title=\"Radio button\">\n      <form [formGroup]=\"radios\">\n        <mat-radio-group formControlName=\"radios\">\n          <mat-radio-button value=\"1\">Option 1</mat-radio-button>\n          <mat-radio-button value=\"2\">Option 2</mat-radio-button>\n          <mat-radio-button value=\"3\">Option 3</mat-radio-button>\n          <mat-radio-button value=\"4\">Option 4</mat-radio-button>\n        </mat-radio-group>\n      </form>\n      <code>\n        {{ this.radios.value | json }}\n      </code>\n    </sty-expansion>\n    <sty-expansion title=\"Select\">\n      <form [formGroup]=\"select\">\n        <mat-form-field>\n          <mat-select formControlName=\"select\" placeholder=\"Favorite food\">\n            <mat-option *ngFor=\"let food of foods\" [value]=\"food\">\n              {{ food }}\n            </mat-option>\n          </mat-select>\n        </mat-form-field>\n      </form>\n      <code>\n        {{ this.select.value | json }}\n      </code>\n    </sty-expansion>\n    <sty-expansion title=\"Slider\">\n      <form [formGroup]=\"slider\">\n        <mat-slider formControlName=\"slider\" min=\"1\" max=\"5\" step=\"0.5\" ></mat-slider>\n      </form>\n      <code>\n        {{ this.slider.value | json }}\n      </code>\n    </sty-expansion>\n    <sty-expansion title=\"Slider toggle\">\n      <form [formGroup]=\"sliderToggle\">\n        <mat-slide-toggle formControlName=\"sliderToggle\"></mat-slide-toggle>\n      </form>\n      <code>\n        {{ this.sliderToggle.value | json }}\n      </code>\n    </sty-expansion>\n  </sty-page>\n  "
+            template: "\n  <sty-page title=\"Forms Control\">\n\n    <sty-expansion title=\"AutoComplete\">\n      <section-auto-complete></section-auto-complete>\n    </sty-expansion>\n\n    <sty-expansion title=\"Checkbox\">\n      <section-checkbox></section-checkbox>\n    </sty-expansion>\n\n    <sty-expansion title=\"Datepicker\">\n      <section-datepicker></section-datepicker>\n    </sty-expansion>\n\n    <sty-expansion title=\"Form field & Input\">\n      <p>The following input types can be used with matInput:</p>\n      <ul>\n        <li>date</li>\n        <li>datetime-local</li>\n        <li>email</li>\n        <li>month</li>\n        <li>number</li>\n        <li>password</li>\n        <li>search</li>\n        <li>tel</li>\n        <li>text</li>\n        <li>time</li>\n        <li>url</li>\n        <li>week</li>\n      </ul>\n      <form [formGroup]=\"texts\">\n        <mat-form-field>\n          <input matInput placeholder=\"Input\" formControlName=\"short\">\n        </mat-form-field>\n        <mat-form-field>\n          <textarea matInput placeholder=\"Textarea\" formControlName=\"long\"></textarea>\n        </mat-form-field>\n      </form>\n      <code>\n        {{ this.texts.value | json }}\n      </code>\n    </sty-expansion>\n    <sty-expansion title=\"Radio button\">\n      <form [formGroup]=\"radios\">\n        <mat-radio-group formControlName=\"radios\">\n          <mat-radio-button value=\"1\">Option 1</mat-radio-button>\n          <mat-radio-button value=\"2\">Option 2</mat-radio-button>\n          <mat-radio-button value=\"3\">Option 3</mat-radio-button>\n          <mat-radio-button value=\"4\">Option 4</mat-radio-button>\n        </mat-radio-group>\n      </form>\n      <code>\n        {{ this.radios.value | json }}\n      </code>\n    </sty-expansion>\n    <sty-expansion title=\"Select\">\n      <form [formGroup]=\"select\">\n        <mat-form-field>\n          <mat-select formControlName=\"select\" placeholder=\"Favorite food\">\n            <mat-option *ngFor=\"let food of foods\" [value]=\"food\">\n              {{ food }}\n            </mat-option>\n          </mat-select>\n        </mat-form-field>\n      </form>\n      <code>\n        {{ this.select.value | json }}\n      </code>\n    </sty-expansion>\n    <sty-expansion title=\"Slider\">\n      <form [formGroup]=\"slider\">\n        <mat-slider formControlName=\"slider\" min=\"1\" max=\"5\" step=\"0.5\" ></mat-slider>\n      </form>\n      <code>\n        {{ this.slider.value | json }}\n      </code>\n    </sty-expansion>\n    <sty-expansion title=\"Slider toggle\">\n      <form [formGroup]=\"sliderToggle\">\n        <mat-slide-toggle formControlName=\"sliderToggle\"></mat-slide-toggle>\n      </form>\n      <code>\n        {{ this.sliderToggle.value | json }}\n      </code>\n    </sty-expansion>\n  </sty-page>\n  "
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormBuilder */]])
     ], FormsControlComponent);
@@ -523,7 +633,10 @@ var FormsControlComponent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_app_shared__ = __webpack_require__("./src/app/shared/index.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__form_controls_component__ = __webpack_require__("./src/app/main/sections/forms/form-controls.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__checkbox_component__ = __webpack_require__("./src/app/main/sections/forms/checkbox.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__date_picker_component__ = __webpack_require__("./src/app/main/sections/forms/date-picker.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__form_controls_component__ = __webpack_require__("./src/app/main/sections/forms/form-controls.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__auto_complete_component__ = __webpack_require__("./src/app/main/sections/forms/auto-complete.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -535,14 +648,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
+
+
 var StyFormsModule = /** @class */ (function () {
     function StyFormsModule() {
     }
     StyFormsModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* NgModule */])({
             imports: [__WEBPACK_IMPORTED_MODULE_2_app_shared__["a" /* SharedModule */], __WEBPACK_IMPORTED_MODULE_1__angular_forms__["i" /* ReactiveFormsModule */], __WEBPACK_IMPORTED_MODULE_1__angular_forms__["d" /* FormsModule */]],
-            exports: [__WEBPACK_IMPORTED_MODULE_3__form_controls_component__["a" /* FormsControlComponent */]],
-            declarations: [__WEBPACK_IMPORTED_MODULE_3__form_controls_component__["a" /* FormsControlComponent */]],
+            exports: [__WEBPACK_IMPORTED_MODULE_5__form_controls_component__["a" /* FormsControlComponent */]],
+            declarations: [__WEBPACK_IMPORTED_MODULE_5__form_controls_component__["a" /* FormsControlComponent */], __WEBPACK_IMPORTED_MODULE_6__auto_complete_component__["a" /* SectionActoCompleteComponent */], __WEBPACK_IMPORTED_MODULE_3__checkbox_component__["a" /* SectionCheckboxComponent */], __WEBPACK_IMPORTED_MODULE_4__date_picker_component__["a" /* SectionDatepickerComponent */]],
         })
     ], StyFormsModule);
     return StyFormsModule;
