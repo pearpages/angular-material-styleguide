@@ -7,7 +7,7 @@
     {
       "root": "src",
       "outDir": "docs",
-      "deployUrl": "angular-material-styleguide",
+      "deployUrl": "angular-material-styleguide/",
       "assets": [
         "assets",
         "favicon.ico"
