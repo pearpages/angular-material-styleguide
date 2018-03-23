@@ -4,9 +4,9 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
+import { StyNavigatonModule } from './nav';
 import { MainModule } from './main';
 import { SharedModule } from './shared';
-import { SidebarModule } from './sidebar';
 
 @NgModule({
   declarations: [
@@ -16,7 +16,7 @@ import { SidebarModule } from './sidebar';
     BrowserModule,
     BrowserAnimationsModule,
     SharedModule,
-    SidebarModule,
+    StyNavigatonModule,
     MainModule,
     RouterModule.forRoot([])
   ],

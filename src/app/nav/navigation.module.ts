@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 
 import { SharedModule } from 'app/shared';
+import { FooterComponent } from './footer.component';
+import { HeaderComponent } from './header.component';
 import { SidebarComponent } from './sidebar.component';
 
-const components = [SidebarComponent];
+const components = [SidebarComponent, FooterComponent, HeaderComponent];
 
 @NgModule({
   imports: [SharedModule],
@@ -11,4 +13,4 @@ const components = [SidebarComponent];
   declarations: [...components],
   providers: [],
 })
-export class SidebarModule { }
+export class StyNavigatonModule { }

@@ -68,9 +68,9 @@ var AppComponent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__("./src/app/app.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__main__ = __webpack_require__("./src/app/main/index.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__shared__ = __webpack_require__("./src/app/shared/index.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__sidebar__ = __webpack_require__("./src/app/sidebar/index.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__nav__ = __webpack_require__("./src/app/nav/index.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__main__ = __webpack_require__("./src/app/main/index.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__shared__ = __webpack_require__("./src/app/shared/index.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -96,9 +96,9 @@ var AppModule = /** @class */ (function () {
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
                 __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
-                __WEBPACK_IMPORTED_MODULE_6__shared__["a" /* SharedModule */],
-                __WEBPACK_IMPORTED_MODULE_7__sidebar__["a" /* SidebarModule */],
-                __WEBPACK_IMPORTED_MODULE_5__main__["a" /* MainModule */],
+                __WEBPACK_IMPORTED_MODULE_7__shared__["a" /* SharedModule */],
+                __WEBPACK_IMPORTED_MODULE_5__nav__["a" /* StyNavigatonModule */],
+                __WEBPACK_IMPORTED_MODULE_6__main__["a" /* MainModule */],
                 __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* RouterModule */].forRoot([])
             ],
             providers: [],
@@ -1431,18 +1431,104 @@ var DataTableModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/shared/components/components.module.ts":
+/***/ "./src/app/nav/footer.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StyComponentsModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FooterComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_app_shared_material__ = __webpack_require__("./src/app/shared/material/index.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__page_component__ = __webpack_require__("./src/app/shared/components/page.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__header_component__ = __webpack_require__("./src/app/shared/components/header.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__footer_component__ = __webpack_require__("./src/app/shared/components/footer.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__expansion_component__ = __webpack_require__("./src/app/shared/components/expansion.component.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var FooterComponent = /** @class */ (function () {
+    function FooterComponent() {
+    }
+    FooterComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'sty-footer',
+            styles: ["\n    footer {\n      padding: 12px;\n      color: white;\n      font-size: 14px;\n    }\n    footer * {\n      color: white;\n    }\n  "],
+            template: "\n  <footer class=\"primary\">\n    <a [routerLink]=\"['']\">home</a> | <a [routerLink]=\"['resources']\">resources</a>\n  </footer>\n  "
+        })
+    ], FooterComponent);
+    return FooterComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/nav/header.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HeaderComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var HeaderComponent = /** @class */ (function () {
+    function HeaderComponent() {
+        this.menuClicked = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* EventEmitter */]();
+    }
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["R" /* Output */])(),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* EventEmitter */])
+    ], HeaderComponent.prototype, "menuClicked", void 0);
+    HeaderComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'sty-header',
+            styles: ["\n    .sty-header {\n      position: fixed;\n      z-index: 1;\n      box-shadow: 0px 1px 10px 0px #222;\n    }\n  "],
+            template: "\n    <mat-toolbar class=\"sty-header\" color=\"primary\">\n      <a mat-button (click)=\"menuClicked.emit(true)\"><mat-icon>menu</mat-icon></a>\n      <span [routerLink]=\"['']\">CMS</span>\n    </mat-toolbar>\n    "
+        })
+    ], HeaderComponent);
+    return HeaderComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/nav/index.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__navigation_module__ = __webpack_require__("./src/app/nav/navigation.module.ts");
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__navigation_module__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__footer_component__ = __webpack_require__("./src/app/nav/footer.component.ts");
+/* unused harmony namespace reexport */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__header_component__ = __webpack_require__("./src/app/nav/header.component.ts");
+/* unused harmony namespace reexport */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__sidebar_component__ = __webpack_require__("./src/app/nav/sidebar.component.ts");
+/* unused harmony namespace reexport */
+
+
+
+
+
+
+/***/ }),
+
+/***/ "./src/app/nav/navigation.module.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StyNavigatonModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_app_shared__ = __webpack_require__("./src/app/shared/index.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__footer_component__ = __webpack_require__("./src/app/nav/footer.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__header_component__ = __webpack_require__("./src/app/nav/header.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__sidebar_component__ = __webpack_require__("./src/app/nav/sidebar.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1454,9 +1540,87 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+var components = [__WEBPACK_IMPORTED_MODULE_4__sidebar_component__["a" /* SidebarComponent */], __WEBPACK_IMPORTED_MODULE_2__footer_component__["a" /* FooterComponent */], __WEBPACK_IMPORTED_MODULE_3__header_component__["a" /* HeaderComponent */]];
+var StyNavigatonModule = /** @class */ (function () {
+    function StyNavigatonModule() {
+    }
+    StyNavigatonModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* NgModule */])({
+            imports: [__WEBPACK_IMPORTED_MODULE_1_app_shared__["a" /* SharedModule */]],
+            exports: components.slice(),
+            declarations: components.slice(),
+            providers: [],
+        })
+    ], StyNavigatonModule);
+    return StyNavigatonModule;
+}());
 
 
-var components = [__WEBPACK_IMPORTED_MODULE_6__expansion_component__["a" /* ExpansionComponent */], __WEBPACK_IMPORTED_MODULE_5__footer_component__["a" /* FooterComponent */], __WEBPACK_IMPORTED_MODULE_4__header_component__["a" /* HeaderComponent */], __WEBPACK_IMPORTED_MODULE_3__page_component__["a" /* PageComponent */]];
+
+/***/ }),
+
+/***/ "./src/app/nav/sidebar.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SidebarComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var SidebarComponent = /** @class */ (function () {
+    function SidebarComponent() {
+        this.close = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* EventEmitter */]();
+    }
+    SidebarComponent.prototype.ngOnInit = function () { };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["R" /* Output */])(),
+        __metadata("design:type", Object)
+    ], SidebarComponent.prototype, "close", void 0);
+    SidebarComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'sty-sidebar',
+            styles: ["\n    .sty-sidebar__close {\n      text-align: right;\n    }\n    .sty-sidebar__close-icon {\n      cursor: pointer;\n      padding: 10px;\n    }\n    .sty-sidebar__close-icon:hover {\n      color: #ccc;\n    }\n  "],
+            template: "\n  <div class=\"sty-sidebar__close\">\n    <mat-icon class=\"sty-sidebar__close-icon\" (click)=\"close.emit(true)\">clear</mat-icon>\n  </div>\n  <mat-nav-list (click)=\"close.emit(true)\">\n    <mat-list-item>\n       <a [routerLink]=\"['examples', 'forms-control']\" matLine >Form Controls</a>\n       <button mat-icon-button>\n          <mat-icon>create</mat-icon>\n       </button>\n    </mat-list-item>\n    <mat-divider></mat-divider>\n    <mat-list-item>\n       <a matLine >(Disabled) Navigation</a>\n       <button mat-icon-button>\n          <mat-icon>apps</mat-icon>\n       </button>\n    </mat-list-item>\n    <mat-divider></mat-divider>\n    <mat-list-item>\n       <a matLine [routerLink]=\"['examples', 'layout']\">Layout</a>\n       <button mat-icon-button>\n          <mat-icon>view_module</mat-icon>\n       </button>\n    </mat-list-item>\n    <mat-divider></mat-divider>\n    <mat-list-item>\n       <a [routerLink]=\"['examples', 'buttons']\" matLine >Buttons</a>\n       <button mat-icon-button>\n          <mat-icon>add_box</mat-icon>\n       </button>\n    </mat-list-item>\n    <mat-divider></mat-divider>\n    <mat-list-item>\n    <a [routerLink]=\"['examples', 'indicators']\" matLine >Indicators</a>\n    <button mat-icon-button>\n       <mat-icon>add_box</mat-icon>\n    </button>\n </mat-list-item>\n <mat-divider></mat-divider>\n    <mat-list-item>\n       <a [routerLink]=\"['examples', 'popups-modals']\" matLine >Popup & Modals</a>\n       <button mat-icon-button>\n          <mat-icon>present_to_all</mat-icon>\n       </button>\n    </mat-list-item>\n    <mat-divider></mat-divider>\n    <mat-list-item>\n       <a matLine [routerLink]=\"['examples', 'data-table']\">Data table</a>\n       <button mat-icon-button>\n          <mat-icon>border_left</mat-icon>\n       </button>\n    </mat-list-item>\n  </mat-nav-list>\n  "
+        }),
+        __metadata("design:paramtypes", [])
+    ], SidebarComponent);
+    return SidebarComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/shared/components/components.module.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StyComponentsModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_app_shared_material__ = __webpack_require__("./src/app/shared/material/index.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__page_component__ = __webpack_require__("./src/app/shared/components/page.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__expansion_component__ = __webpack_require__("./src/app/shared/components/expansion.component.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+
+var components = [__WEBPACK_IMPORTED_MODULE_4__expansion_component__["a" /* ExpansionComponent */], __WEBPACK_IMPORTED_MODULE_3__page_component__["a" /* PageComponent */]];
 var StyComponentsModule = /** @class */ (function () {
     function StyComponentsModule() {
     }
@@ -1505,74 +1669,6 @@ var ExpansionComponent = /** @class */ (function () {
         })
     ], ExpansionComponent);
     return ExpansionComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/shared/components/footer.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FooterComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-
-var FooterComponent = /** @class */ (function () {
-    function FooterComponent() {
-    }
-    FooterComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'sty-footer',
-            styles: ["\n    footer {\n      padding: 12px;\n      color: white;\n      font-size: 14px;\n    }\n    footer * {\n      color: white;\n    }\n  "],
-            template: "\n  <footer class=\"primary\">\n    <a [routerLink]=\"['']\">home</a> | <a [routerLink]=\"['resources']\">resources</a>\n  </footer>\n  "
-        })
-    ], FooterComponent);
-    return FooterComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/shared/components/header.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HeaderComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var HeaderComponent = /** @class */ (function () {
-    function HeaderComponent() {
-        this.menuClicked = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* EventEmitter */]();
-    }
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["R" /* Output */])(),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* EventEmitter */])
-    ], HeaderComponent.prototype, "menuClicked", void 0);
-    HeaderComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'sty-header',
-            styles: ["\n    .sty-header {\n      position: fixed;\n      z-index: 1;\n      box-shadow: 0px 1px 10px 0px #222;\n    }\n  "],
-            template: "\n    <mat-toolbar class=\"sty-header\" color=\"primary\">\n      <a mat-button (click)=\"menuClicked.emit(true)\"><mat-icon>menu</mat-icon></a>\n      <span [routerLink]=\"['']\">CMS</span>\n    </mat-toolbar>\n    "
-        })
-    ], HeaderComponent);
-    return HeaderComponent;
 }());
 
 
@@ -1932,93 +2028,6 @@ var SharedModule = /** @class */ (function () {
         })
     ], SharedModule);
     return SharedModule;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/sidebar/index.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__sidebar_module__ = __webpack_require__("./src/app/sidebar/sidebar.module.ts");
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__sidebar_module__["a"]; });
-
-
-
-/***/ }),
-
-/***/ "./src/app/sidebar/sidebar.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SidebarComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var SidebarComponent = /** @class */ (function () {
-    function SidebarComponent() {
-        this.close = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* EventEmitter */]();
-    }
-    SidebarComponent.prototype.ngOnInit = function () { };
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["R" /* Output */])(),
-        __metadata("design:type", Object)
-    ], SidebarComponent.prototype, "close", void 0);
-    SidebarComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'sty-sidebar',
-            styles: ["\n    .sty-sidebar__close {\n      text-align: right;\n    }\n    .sty-sidebar__close-icon {\n      cursor: pointer;\n      padding: 10px;\n    }\n    .sty-sidebar__close-icon:hover {\n      color: #ccc;\n    }\n  "],
-            template: "\n  <div class=\"sty-sidebar__close\">\n    <mat-icon class=\"sty-sidebar__close-icon\" (click)=\"close.emit(true)\">clear</mat-icon>\n  </div>\n  <mat-nav-list (click)=\"close.emit(true)\">\n    <mat-list-item>\n       <a [routerLink]=\"['examples', 'forms-control']\" matLine >Form Controls</a>\n       <button mat-icon-button>\n          <mat-icon>create</mat-icon>\n       </button>\n    </mat-list-item>\n    <mat-divider></mat-divider>\n    <mat-list-item>\n       <a matLine >(Disabled) Navigation</a>\n       <button mat-icon-button>\n          <mat-icon>apps</mat-icon>\n       </button>\n    </mat-list-item>\n    <mat-divider></mat-divider>\n    <mat-list-item>\n       <a matLine [routerLink]=\"['examples', 'layout']\">Layout</a>\n       <button mat-icon-button>\n          <mat-icon>view_module</mat-icon>\n       </button>\n    </mat-list-item>\n    <mat-divider></mat-divider>\n    <mat-list-item>\n       <a [routerLink]=\"['examples', 'buttons']\" matLine >Buttons</a>\n       <button mat-icon-button>\n          <mat-icon>add_box</mat-icon>\n       </button>\n    </mat-list-item>\n    <mat-divider></mat-divider>\n    <mat-list-item>\n    <a [routerLink]=\"['examples', 'indicators']\" matLine >Indicators</a>\n    <button mat-icon-button>\n       <mat-icon>add_box</mat-icon>\n    </button>\n </mat-list-item>\n <mat-divider></mat-divider>\n    <mat-list-item>\n       <a [routerLink]=\"['examples', 'popups-modals']\" matLine >Popup & Modals</a>\n       <button mat-icon-button>\n          <mat-icon>present_to_all</mat-icon>\n       </button>\n    </mat-list-item>\n    <mat-divider></mat-divider>\n    <mat-list-item>\n       <a matLine [routerLink]=\"['examples', 'data-table']\">Data table</a>\n       <button mat-icon-button>\n          <mat-icon>border_left</mat-icon>\n       </button>\n    </mat-list-item>\n  </mat-nav-list>\n  "
-        }),
-        __metadata("design:paramtypes", [])
-    ], SidebarComponent);
-    return SidebarComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/sidebar/sidebar.module.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SidebarModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_app_shared__ = __webpack_require__("./src/app/shared/index.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__sidebar_component__ = __webpack_require__("./src/app/sidebar/sidebar.component.ts");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-
-
-
-var components = [__WEBPACK_IMPORTED_MODULE_2__sidebar_component__["a" /* SidebarComponent */]];
-var SidebarModule = /** @class */ (function () {
-    function SidebarModule() {
-    }
-    SidebarModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* NgModule */])({
-            imports: [__WEBPACK_IMPORTED_MODULE_1_app_shared__["a" /* SharedModule */]],
-            exports: components.slice(),
-            declarations: components.slice(),
-            providers: [],
-        })
-    ], SidebarModule);
-    return SidebarModule;
 }());
 
 
