@@ -14,7 +14,7 @@ import { Component } from '@angular/core';
   `],
   template: `
   <footer class="primary">
-    <a [routerLink]="['']">home</a> | <a [routerLink]="['resources']">resources</a>
+    <a [routerLink]="['']">home</a> | <a [routerLink]="['resources']">resources</a> | <a href="https://pearpages.com">pearpages.com</a>
   </footer>
   `
 })
